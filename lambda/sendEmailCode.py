@@ -1,3 +1,5 @@
+import json
+
 import boto3, os, json
 import smtplib
 import email.message
@@ -7,8 +9,15 @@ url_expiration = 172800 # 2days
 
 def sendEmail(to, subject, body):
 
-    gmail_sender = os.environ['email_account']
-    gmail_passwd = os.environ['email_password']
+    gmail_sender =
+    gmail_passwd =
+
+    USERNAME_SMTP =
+    PASSWORD_SMTP =
+
+    HOST = "email-smtp.us-east-1.amazonaws.com"
+    PORT = 587
+
     print(gmail_passwd)
     msg = email.message.Message()
     msg['Subject'] = subject
@@ -19,9 +28,10 @@ def sendEmail(to, subject, body):
 
     # Gmail Sign In
 
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server = smtplib.SMTP(HOST, PORT)
     server.ehlo()
     server.starttls()
+    server.login(USERNAME_SMTP, PASSWORD_SMTP)
     server.login(gmail_sender, gmail_passwd)
 
     print(msg)
@@ -47,3 +57,4 @@ def lambda_handler(event, context):
             sendEmail(to, subject, body)
 
     return "done"
+
