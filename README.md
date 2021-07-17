@@ -1,4 +1,3 @@
-# Antra SEP java evaluation project
 ## 1. Setup the environment and make it run.
  All three projects are Sprintboot application.<br>
 
@@ -28,6 +27,5 @@ Suggestions:
 12. Add new Services like PNGService, JPEGService etc
 13. ...
 
-## 4. Send your code to [Dawei Zhuang(dawei.zhuang@antra.com)](dawei.zhuang@antra.com) using Github/Gitlab. 
-Make sure there is README.MD to indicate what did you change/add to the project.
+
 
